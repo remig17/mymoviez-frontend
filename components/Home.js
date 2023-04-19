@@ -47,7 +47,7 @@ function Home() {
   }, []);
 
  
-
+ 
   const movies = moviesData.map((data, i) => {
     const isLiked = likedMovies.some(movie => movie === data.title);
     return <Movie key={i} updateLikedMovies={updateLikedMovies} isLiked={isLiked} title={data.title} overview={data.overview.substring(0, 250)+"..."} poster={"https://image.tmdb.org/t/p/w500/"+ data.poster_path} voteAverage={data.vote_average} voteCount={data.vote_count} />;
@@ -70,6 +70,6 @@ function Home() {
       </div>
     </div>
   );
-} 
+}
 
 export default Home;
